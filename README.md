@@ -1,7 +1,7 @@
 ## Ma config NeoVim
 
 Prérequis :
- - Installer (ripgrep)[https://github.com/BurntSushi/ripgrep]
+ - Installer [ripgrep](https://github.com/BurntSushi/ripgrep)
  - Npm pour certains LSP
 
 Config entièrement en lua. Les plugins sont gérés avec Packer car un bug 

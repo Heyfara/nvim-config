@@ -12,9 +12,17 @@ lsp.ensure_installed({
     'phpactor',
 })
 
-require('lspconfig').phpactor.setup({})
+lsp.configure("yamlls", {
+    settings = {
+        yaml = {
+            keyOrdering = false
+        }
+    }
+})
 
 lsp.setup()
+
+require('lspconfig').phpactor.setup({})
 
 local cmp = require('cmp')
 cmp.setup({
@@ -30,3 +38,5 @@ cmp.setup({
         ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
     })
 })
+
+vim.keymap.set({ 'n', 'v' }, '<leader>ca', vim.lsp.buf.code_action)

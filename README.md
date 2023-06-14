@@ -2,6 +2,7 @@
 
 Prérequis :
  - Installer [ripgrep](https://github.com/BurntSushi/ripgrep)
+ - Installer une patched font : [Meslo](https://www.nerdfonts.com/font-downloads)
  - Npm pour certains LSP
 
 Config entièrement en lua. Les plugins sont gérés avec Packer car un bug 

@@ -30,13 +30,6 @@ return require('packer').startup(function(use)
     }
 
     use {
-        'freddiehaddad/feline.nvim',
-        requires = {
-            'lewis6991/gitsigns.nvim'
-        },
-    }
-
-    use {
         'nvim-treesitter/nvim-treesitter',
         run = ':TSUpdate'
     }

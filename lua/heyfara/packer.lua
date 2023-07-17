@@ -13,15 +13,17 @@ local packer_bootstrap = ensure_packer()
 
 return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
-
+    -- Fuzzy finder
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.1',
         -- or                            , branch = '0.1.x',
         requires = { {'nvim-lua/plenary.nvim'} }
     }
 
+    -- Color theme
     use { "catppuccin/nvim", as = "catppuccin" }
 
+    -- Custom status line
     use {
         'freddiehaddad/feline.nvim',
         requires = {
@@ -29,11 +31,13 @@ return require('packer').startup(function(use)
         },
     }
 
+    -- Languages grammar
     use {
         'nvim-treesitter/nvim-treesitter',
         run = ':TSUpdate'
     }
 
+    -- File explorer
     use {
         'nvim-tree/nvim-tree.lua',
         requires = {
@@ -41,28 +45,24 @@ return require('packer').startup(function(use)
         },
     }
 
-    use { 'lumiliet/vim-twig' }
-
+    -- Native LSP config
+    use { 'neovim/nvim-lspconfig' }
+    -- Auto install LSP servers
     use {
-        'VonHeikemen/lsp-zero.nvim',
-        branch = 'v2.x',
-        requires = {
-            -- LSP Support
-            {'neovim/nvim-lspconfig'},             -- Required
-            {                                      -- Optional
-                'williamboman/mason.nvim',
-                run = function()
-                    pcall(vim.cmd, 'MasonUpdate')
-                end,
-            },
-            {'williamboman/mason-lspconfig.nvim'}, -- Optional
-
-            -- Autocompletion
-            {'hrsh7th/nvim-cmp'},     -- Required
-            {'hrsh7th/cmp-nvim-lsp'}, -- Required
-            {'L3MON4D3/LuaSnip'},     -- Required
-        }
+        'williamboman/mason.nvim',
+        run = ":MasonUpdate" -- :MasonUpdate updates registry contents
     }
+    use { 'williamboman/mason-lspconfig.nvim' }
+    -- LSP autocomplete
+    use { 'hrsh7th/nvim-cmp' }
+    use { 'hrsh7th/cmp-nvim-lsp' }
+    use { 'hrsh7th/cmp-buffer' }
+    use { 'hrsh7th/cmp-path' }
+    use { 'L3MON4D3/LuaSnip' }
+    use { 'saadparwaiz1/cmp_luasnip' }
+
+    -- Twig syntax highlighting
+    use { 'lumiliet/vim-twig' }
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins

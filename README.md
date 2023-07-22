@@ -2,6 +2,7 @@
 
 Prérequis :
  - Installer [ripgrep](https://github.com/BurntSushi/ripgrep)
+ - Installer [fd](https://github.com/sharkdp/fd)
  - Installer une patched font : [Meslo](https://www.nerdfonts.com/font-downloads)
  - Npm pour certains LSP
 

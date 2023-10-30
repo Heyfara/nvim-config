@@ -19,6 +19,7 @@ require('mason-lspconfig').setup({
         'tsserver',
         'eslint',
         'html',
+        'clangd',
     }
 })
 

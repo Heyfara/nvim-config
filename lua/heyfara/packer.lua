@@ -63,6 +63,9 @@ return require('packer').startup(function(use)
     -- Twig syntax highlighting
     use { 'lumiliet/vim-twig' }
 
+    -- DAP
+    use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
+
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
     if packer_bootstrap then

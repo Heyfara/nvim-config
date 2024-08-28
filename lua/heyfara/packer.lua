@@ -61,7 +61,7 @@ return require('packer').startup(function(use)
     use { 'saadparwaiz1/cmp_luasnip' }
 
     -- Twig syntax highlighting
-    use { 'lumiliet/vim-twig' }
+    --use { 'lumiliet/vim-twig' }
 
     -- DAP
     use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap", "nvim-neotest/nvim-nio"} }

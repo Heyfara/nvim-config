@@ -15,7 +15,7 @@ return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
     -- Fuzzy finder
     use {
-        'nvim-telescope/telescope.nvim', tag = '0.1.2',
+        'nvim-telescope/telescope.nvim', tag = '0.1.8',
         requires = { {'nvim-lua/plenary.nvim'} }
     }
 
@@ -64,7 +64,7 @@ return require('packer').startup(function(use)
     use { 'lumiliet/vim-twig' }
 
     -- DAP
-    use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
+    use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap", "nvim-neotest/nvim-nio"} }
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins

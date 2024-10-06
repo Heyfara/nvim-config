@@ -21,7 +21,8 @@ require 'nvim-treesitter.configs'.setup {
         "twig",
         "vim",
         "vimdoc",
-        "yaml"
+        "yaml",
+        "twig",
     },
     highlight = {
         enable = true,
@@ -29,6 +30,6 @@ require 'nvim-treesitter.configs'.setup {
     },
     indent = {
         enable = true,
-        disable = { "twig" }
+        disable = { "twig", "html" }
     },
 }

@@ -61,10 +61,18 @@ return require('packer').startup(function(use)
     use { 'saadparwaiz1/cmp_luasnip' }
 
     -- Twig syntax highlighting
-    use { 'lumiliet/vim-twig' }
+    use { 'nelsyeung/twig.vim' }
 
     -- DAP
     use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap", "nvim-neotest/nvim-nio"} }
+
+    -- Undo tree
+    use {
+        "jiaoshijie/undotree",
+        requires = {
+            "nvim-lua/plenary.nvim",
+        },
+    }
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins

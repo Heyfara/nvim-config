@@ -1,5 +1,8 @@
 require("nvim-tree").setup({
-    sort_by = "case_sensitive"
+    sort_by = "case_sensitive",
+    git = {
+        timeout = 500,
+    }
 })
 
 local function open_nvim_tree()
